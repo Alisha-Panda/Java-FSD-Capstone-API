@@ -42,6 +42,7 @@ public class CartController {
 			return new ResponseEntity<List<Cart>>(list, new HttpHeaders(), HttpStatus.OK); 
 		}
 		catch(Exception ex) {
+			System.out.println(ex.getMessage().toString());
 			return new ResponseEntity<String>("Unable to fetch carts", new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR); 
 		}
 	}

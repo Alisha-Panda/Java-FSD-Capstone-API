@@ -15,9 +15,10 @@ import org.openqa.selenium.support.ui.Select;
 public class RegisterPageTest {
 	
 	
-	String driverPath = "C:\\Users\\pandaa7\\BrowserDriver\\chromedriver.exe";
+	String driverPath = "C:\\Users\\pandaa7\\eclipse-projects\\java-fsd-capstone-assessment-foodbox\\java-fsd-capstone-assessment-foodbox\\chromedriver\\chromedriver.exe";
 	ChromeDriver driver;
-	String baseUrl = "http://foodbox-capstone.s3-website.us-east-2.amazonaws.com/";
+//	String baseUrl = "http://foodbox-capstone.s3-website.us-east-2.amazonaws.com/";
+	String baseUrl = "http://localhost:4200/";
 	
 	@Test
 	void testRegisterUrl() {

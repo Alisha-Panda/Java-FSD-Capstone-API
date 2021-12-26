@@ -8,12 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ProductPageTest {
 	
-	String driverPath = "C:\\Users\\pandaa7\\BrowserDriver\\chromedriver.exe";
+	String driverPath = "C:\\Users\\pandaa7\\eclipse-projects\\java-fsd-capstone-assessment-foodbox\\java-fsd-capstone-assessment-foodbox\\chromedriver\\chromedriver.exe";
 	ChromeDriver driver;
-	String baseUrl = "http://foodbox-capstone.s3-website.us-east-2.amazonaws.com/";
+	String baseUrl = "http://localhost:4200/";
 	
 	@Test
-	void testProductsUrl() {
+	void testCartUrl() {
 		String siteUrl = baseUrl+"products";
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
@@ -27,10 +27,9 @@ public class ProductPageTest {
 		System.setProperty("webdriver.chrome.driver", driverPath);
 		driver = new ChromeDriver();
 		driver.get(siteUrl);
-		WebElement explore = driver.findElementByXPath("/html/body/app-root/app-products/div[3]/table/tbody/tr/td[7]/div/div[1]/a");
-		explore.click();
-//		siteUrl = baseUrl + "products?category=Mughlai";
-//		assertEquals(siteUrl,driver.getCurrentUrl());
+		WebElement add = driver.findElementByXPath("/html/body/app-root/app-products/div[3]/table/tbody/tr[1]/td[7]/div/div[2]");
+		add.click();
+		assertEquals(siteUrl,driver.getCurrentUrl());
 	}
 
 }
